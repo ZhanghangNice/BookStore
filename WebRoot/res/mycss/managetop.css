@@ -1,0 +1,58 @@
+body{
+	background: #FFFFFF;
+	font-family: '微软雅黑','黑体','times new roman';
+}
+.top-nav {
+	height: 50px;
+	margin: 0 auto;
+	padding-top: 30px;
+	width: 1100px;
+}
+.top-nav a{
+	text-decoration:none;
+}
+.logo{
+	float:left;
+	padding-right:20px;
+}
+.booklogo{
+	font-size:30px;
+	color:#000;
+}
+.top-nav-a{
+	position: absolute;
+	margin-left:200px;
+}
+.row{
+	width:1100px;
+	margin:0px;
+	margin-top:30px;
+	margin-left:auto;
+	margin-right:auto;
+	
+}
+
+.trigger{
+	float: right;
+	margin-top:7px;
+}
+
+.table{
+	table-layout:fixed;
+}
+
+.dysl{
+	text-overflow: ellipsis;
+	white-space: nowrap; 
+	overflow: hidden;
+}
+.nav{
+	margin:0px;
+}
+.dropdown-menu{
+	position: relative;
+}
+
+.m-img{
+	margin-left:22px;
+}

@@ -1,0 +1,160 @@
+.row{
+	margin:0px;
+}
+.myspan{
+	margin-top:130px;
+	width:1200px;
+	min-height:0px;
+	float:none;
+	margin-left:auto;
+	margin-right:auto;
+	min-height:400px;
+}
+.mynavigation-left{
+	width:210px;
+	float:left;
+}
+.my-left-nav{
+	padding:0;
+	margin-top:20px;
+}
+.my-left-nav dd{
+	padding: 15px 0 15px 0px;
+	margin:0px;
+}
+.my-left-nav dd a{
+	padding: 15px 90px 15px 20px;
+	text-decoration: none;
+	color: #999;
+}
+.my-left-nav dd a:hover{
+	color: #000;
+}
+.active{
+	color: #000!important;
+}
+
+.my-left-nav dd i{
+	float:right;
+}
+
+.myuser-right{
+	width:920px;
+	float:right;
+	margin-top:10px
+}
+.mynavbar{
+	background: #fafafc;
+    line-height: 38px;
+    border: 1px solid #f3f3f3;
+}
+.mynavbar a{
+	text-decoration: none;
+	color: #515151;
+}
+
+.mynavbar .del:hover{
+	color: #F73131;
+}
+.mynavbar a:hover{
+	color: #7BBC52;
+}
+
+.right-ci{
+	width:220px;
+}
+
+.table{
+	margin-bottom:0;
+}
+
+.table th, .table td{
+	text-align:center;
+}
+
+.fav img{
+	padding:20px 600px 20px 200px;
+}
+.fav h4{
+	position: absolute;
+	margin:-70px 0 0 320px;
+	color:#70BFEA;
+}
+.adel{
+	position: absolute;
+	margin-left:780px;
+	border:0px;
+}
+
+.mytr{
+	position: absolute;
+	padding:0px 10px;
+	width:900px;
+}
+.pay:hover{
+	
+}
+
+/* 验证 */
+input.error:focus{
+transition:border linear 0.2s,box-shadow linear .2s;
+outline:none;
+border-color:red;
+box-shadow:0 0 8px red;
+}
+ #username-error,#email-error,#qq-error, #tel-error {
+   width: auto;
+   color:red;
+   margin-left:233px;
+   margin-top:-25px;
+   position: absolute;
+}
+
+/* 熊猫走动 */
+.walk{
+	border:0px;
+	height:140px;
+	width:100px;
+	position:absolute;
+	left:0px;
+	bottom:0px;
+	position:fixed;
+	
+	animation-name:myfirst;
+	animation-duration:5s;
+	animation-timing-function:linear;
+	animation-delay:2s;
+	animation-iteration-count:infinite;
+	animation-direction:alternate;
+	animation-play-state:running;
+	/* Safari and Chrome: */
+	-webkit-animation-name:myfirst;
+	-webkit-animation-duration:5s;
+	-webkit-animation-timing-function:linear;
+	-webkit-animation-delay:2s;
+	-webkit-animation-iteration-count:infinite;
+	-webkit-animation-direction:alternate;
+	-webkit-animation-play-state:running;
+}
+
+@keyframes myfirst
+{
+0%   {left:0px; bottom:0px;}
+25%  {left:0px; bottom:0px;}
+50%  {left:100px; bottom:100px;}
+75%  {left:0px; bottom:100px;}
+100% {left:0px; bottom:0px;}
+}
+
+@-webkit-keyframes myfirst /* Safari and Chrome */
+{
+0%   {left:0px; bottom:0px;}
+25%  {left:100px; bottom:0px;}
+50%  {left:100px; bottom:100px;}
+75%  {left:0px; bottom:100px;}
+100% {bleft:0px; bottom:0px;}
+}
+.walk:hover{
+	-webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}

@@ -1,0 +1,45 @@
+.divider{
+	margin-top:-20px;
+	margin-bottom:20px;
+	height:1px;
+	border:none;
+	border-top:1px solid #DCDCDC;
+}
+.unitprice{
+	color:red;
+}
+.form-search{
+	margin:0px;
+}
+
+.input-small{
+	width:54px;
+}
+ .class-select{
+ 	width:180px;
+ 	height:30px;
+ 	padding:4px 14px;
+ 	border:1px solid #CCCCCC;
+	border-radius:15px;
+}
+.row{
+	margin-top:100px;
+	margin-left:0px;
+}
+.myspan{
+	width:1200px;
+	float:none;
+	margin-left:auto;
+	margin-right:auto;
+}
+.mytd{
+	height:310px !important;
+}
+.mytd .myimg{
+	width: 220px;
+    height: 200px;
+}
+
+.favorites{
+	float:right;
+}

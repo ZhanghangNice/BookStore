@@ -1,0 +1,238 @@
+.row{
+	margin:0px;
+}
+.myspan{
+	margin-top:130px;
+	width:1200px;
+	min-height:0px;
+	float:none;
+	margin-left:auto;
+	margin-right:auto;
+	min-height:400px;
+}
+.mynavigation-left{
+	width:210px;
+	float:left;
+}
+.my-left-nav{
+	padding:0;
+	margin-top:20px;
+}
+.my-left-nav dd{
+	padding: 15px 0 15px 0px;
+	margin:0px;
+}
+.my-left-nav dd a{
+	padding: 15px 90px 15px 20px;
+	text-decoration: none;
+	color: #999;
+}
+.my-left-nav dd a:hover{
+	color: #000;
+}
+.active{
+	color: #000!important;
+}
+
+.my-left-nav dd i{
+	float:right;
+}
+
+.myuser-right{
+	width:920px;
+	float:right;
+	margin-top:10px
+}
+.mynavbar{
+	background: #fafafc;
+    line-height: 38px;
+    border: 1px solid #f3f3f3;
+}
+.mynavbar a{
+	text-decoration: none;
+	color: #515151;
+}
+.mynavbar .del:hover{
+	color: #F73131;
+}
+.mynavbar a:hover{
+	color: #7BBC52;
+}
+
+.table{
+	margin-bottom:0;
+}
+
+.table th, .table td{
+	text-align:center;
+}
+
+/* 验证 */
+input.error:focus{
+transition:border linear 0.2s,box-shadow linear .2s;
+outline:none;
+border-color:red;
+box-shadow:0 0 8px red;
+}
+ #username-error,#email-error,#qq-error, #tel-error {
+   width: auto;
+   color:red;
+   margin-left:233px;
+   margin-top:-25px;
+   position: absolute;
+}
+
+/*购物车css*/
+.my-hr{
+	margin:0px;
+	border-top: 1px solid #DDDDDD; 
+	margin-bottom:10px;
+}
+.myheji{
+	height:52px;
+}
+#checkAll{
+	margin:10px 0 0 30px;
+}
+.checkAll{
+	position:absolute;
+	margin:-3px 0 0 8px;
+}
+.mydel{
+	position:absolute;
+	margin:-3px 0 0 80px;
+}
+.yixuanbook{
+	position:absolute;
+	margin:-3px 0 0 360px;
+}
+.jine{
+	position:absolute;
+	margin:-7px 0 0 500px;
+}
+.msum{
+	font-size:25px;
+	color:red;
+	margin:0 10px;
+}
+.jiesuan{
+	float:right;
+	margin-top:2px;
+}
+.jiesuan .mybtn{
+	margin-bottom: 0;
+	text-align: center;
+	font-size: 20px;
+	font-weight:bold;
+	line-height: 25px;
+	padding: 15px 24px;
+	background-color:#2AC4F6;
+	color:#fff;
+}
+.jiesuan .mybtn:hover {
+	background-color:#0aaee3;
+	color:#fff;
+}
+
+
+/* 数量加减 */
+.property-quantity{
+  height: 30px;
+  color: #666;
+}
+.property-quantity .property-quantity-control {
+  position: relative;
+  margin-left:5px;
+  z-index: 1;
+  height: 28px;
+  width: 105px;
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+  overflow: hidden;
+  float: left;
+}
+
+.property-quantity .property-quantity-control button {
+  position: absolute;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  line-height: 8px;
+  font-size: 18px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.property-quantity .property-quantity-control input {
+  position: absolute;
+  top: 0;
+  left: 30px;
+  width: 45px;
+  height: 30px;
+  padding: 0;
+  margin:0px;
+  line-height: 30px;
+  font-size: 18px;
+  border: none;
+  text-align: center;
+  color: #333;
+}
+
+.property-quantity .property-quantity-control .vm-minus {
+  left: 0;
+  border-right: 1px solid #e5e5e5;
+}
+
+.property-quantity .property-quantity-control .vm-plus {
+  right: 0;
+  border-left: 1px solid #e5e5e5;
+}
+
+/* 熊猫走动 */
+.walk{
+	border:0px;
+	height:140px;
+	width:100px;
+	position:absolute;
+	left:0px;
+	bottom:0px;
+	position:fixed;
+	
+	animation-name:myfirst;
+	animation-duration:5s;
+	animation-timing-function:linear;
+	animation-delay:2s;
+	animation-iteration-count:infinite;
+	animation-direction:alternate;
+	animation-play-state:running;
+	/* Safari and Chrome: */
+	-webkit-animation-name:myfirst;
+	-webkit-animation-duration:5s;
+	-webkit-animation-timing-function:linear;
+	-webkit-animation-delay:2s;
+	-webkit-animation-iteration-count:infinite;
+	-webkit-animation-direction:alternate;
+	-webkit-animation-play-state:running;
+}
+
+@keyframes myfirst
+{
+0%   {left:0px; bottom:0px;}
+25%  {left:0px; bottom:0px;}
+50%  {left:100px; bottom:100px;}
+75%  {left:0px; bottom:100px;}
+100% {left:0px; bottom:0px;}
+}
+
+@-webkit-keyframes myfirst /* Safari and Chrome */
+{
+0%   {left:0px; bottom:0px;}
+25%  {left:100px; bottom:0px;}
+50%  {left:100px; bottom:100px;}
+75%  {left:0px; bottom:100px;}
+100% {bleft:0px; bottom:0px;}
+}
+.walk:hover{
+	-webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}

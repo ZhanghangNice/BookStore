@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+  <display-name>bookstore</display-name>
+  
+  <!--   默认页面 -->
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <!--  登录 验证码 -->
+  <servlet>
+    <servlet-name>ValidateCodeServlet</servlet-name>
+    <servlet-class>com.zh.vcode.ValidateCodeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ValidateCodeServlet</servlet-name>
+    <url-pattern>/vcode.jpg</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 登录 -->
+  <servlet>
+  	<servlet-name>LoginServlet</servlet-name>
+  	<servlet-class>com.zh.servlet.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>LoginServlet</servlet-name>
+  	<url-pattern>/login</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 退出登录 -->
+  <servlet>
+  	<servlet-name>Exit</servlet-name>
+  	<servlet-class>com.zh.servlet.Exit</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>Exit</servlet-name>
+  	<url-pattern>/exitlogin</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 过滤器 -->
+  <filter>
+    <display-name>AdminFilter</display-name>
+    <filter-name>AdminFilter</filter-name>
+    <filter-class>com.zh.filter.AdminFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>AdminFilter</filter-name>
+    <url-pattern>/admin/*</url-pattern>
+  </filter-mapping>
+  
+  
+  <!--字符编码过滤  -->
+  <filter>
+  	<filter-name>CharacterEncodingFilter</filter-name>
+  	<filter-class>com.zh.filter.CharacterEncodingFilter</filter-class>
+  </filter>
+  
+  <filter-mapping>
+  	<filter-name>CharacterEncodingFilter</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
+  <!-- 注册 -->
+  <servlet>
+  	<servlet-name>UserRegisterServlet</servlet-name>
+  	<servlet-class>com.zh.servlet.UserRegisterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>UserRegisterServlet</servlet-name>
+  	<url-pattern>/register</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 查看用户table -->
+  <servlet>
+  	<servlet-name>ManageUserServlet</servlet-name>
+  	<servlet-class>com.zh.servlet.manage.ManageUserServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>ManageUserServlet</servlet-name>
+  	<url-pattern>/manageuser_table</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 删除用户 -->
+  <servlet>
+  	<servlet-name>DeleteUserServlet</servlet-name>
+  	<servlet-class>com.zh.servlet.manage.DeleteUserServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>DeleteUserServlet</servlet-name>
+  	<url-pattern>/deleteuser</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 修改用户权限 -->
+  <servlet>
+  	<servlet-name>SetAdminServlet</servlet-name>
+  	<servlet-class>com.zh.servlet.manage.SetAdminServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>SetAdminServlet</servlet-name>
+  	<url-pattern>/setadmin</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 添加进货 -->
+  <servlet>
+  	<servlet-name>AddStockBookServlet</servlet-name>
+  	<servlet-class>com.zh.servlet.manage.AddStockBookServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>AddStockBookServlet</servlet-name>
+  	<url-pattern>/addstockbook</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 添加图书 -->
+  <servlet>
+  	<servlet-name>AddBookServlet</servlet-name>
+  	<servlet-class>com.zh.servlet.manage.AddBookServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>AddBookServlet</servlet-name>
+  	<url-pattern>/addbook</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 上传图书图片 -->
+  <servlet>
+  	<servlet-name>UploadImageServlet</servlet-name>
+  	<servlet-class>com.zh.servlet.file.UploadImageServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>UploadImageServlet</servlet-name>
+  	<url-pattern>/uploadbookimage</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 查看图书table -->
+  <servlet>
+  	<servlet-name>ManageBookServlet</servlet-name>
+  	<servlet-class>com.zh.servlet.manage.ManageBookServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>ManageBookServlet</servlet-name>
+  	<url-pattern>/managebook_table</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 查看图书table -->
+  <servlet>
+  	<servlet-name>ManageEBookServlet</servlet-name>
+  	<servlet-class>com.zh.servlet.manage.ManageEBookServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>ManageEBookServlet</servlet-name>
+  	<url-pattern>/manageEbook_table</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 删除图书 -->
+  <servlet>
+  	<servlet-name>DeleteBookServlet</servlet-name>
+  	<servlet-class>com.zh.servlet.manage.DeleteBookServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>DeleteBookServlet</servlet-name>
+  	<url-pattern>/deletebook</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 删除电子书 -->
+  <servlet>
+  	<servlet-name>DeleteEbookServlet</servlet-name>
+  	<servlet-class>com.zh.servlet.manage.DeleteEbookServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>DeleteEbookServlet</servlet-name>
+  	<url-pattern>/deleteEbook</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 删除订单 -->
+  <servlet>
+  	<servlet-name>DeleteOrderMServlet</servlet-name>
+  	<servlet-class>com.zh.servlet.manage.DeleteOrderMServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>DeleteOrderMServlet</servlet-name>
+  	<url-pattern>/deleteOrderM</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 删除反馈信息 -->
+  <servlet>
+  	<servlet-name>DeleteFeedBackServlet</servlet-name>
+  	<servlet-class>com.zh.servlet.manage.DeleteFeedBackServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>DeleteFeedBackServlet</servlet-name>
+  	<url-pattern>/deleteFeedBack</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 更新图书 -->
+  <servlet>
+  	<servlet-name>UpdateBookServlet</servlet-name>
+  	<servlet-class>com.zh.servlet.manage.UpdateBookServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>UpdateBookServlet</servlet-name>
+  	<url-pattern>/updatebook</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 编辑图书 -->
+  <servlet>
+  	<servlet-name>EditBookServlet</servlet-name>
+  	<servlet-class>com.zh.servlet.manage.EditBookServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>EditBookServlet</servlet-name>
+  	<url-pattern>/editbook</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 查看所有订单table -->
+  <servlet>
+  	<servlet-name>ManageOrderServlet</servlet-name>
+  	<servlet-class>com.zh.servlet.manage.ManageOrderServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>ManageOrderServlet</servlet-name>
+  	<url-pattern>/manageorder_table</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 添加图书详细信息 -->
+  <servlet>
+  	<servlet-name>AddBookDetailServlet</servlet-name>
+  	<servlet-class>com.zh.servlet.manage.AddBookDetailServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>AddBookDetailServlet</servlet-name>
+  	<url-pattern>/addbookdetail</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 添加电子图书信息 -->
+  <servlet>
+  	<servlet-name>AddEbookServlet</servlet-name>
+  	<servlet-class>com.zh.servlet.manage.AddEbookServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>AddEbookServlet</servlet-name>
+  	<url-pattern>/addebook</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 查看意见反馈 -->
+  <servlet>
+  	<servlet-name>ManageFeedBackServlet</servlet-name>
+  	<servlet-class>com.zh.servlet.manage.ManageFeedBackServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>ManageFeedBackServlet</servlet-name>
+  	<url-pattern>/managefeedback_table</url-pattern>
+  </servlet-mapping>
+  
+  <!-- ajax-bookid重复验证 -->
+  <servlet>
+  	<servlet-name>AjaxBookServlet</servlet-name>
+  	<servlet-class>com.zh.servlet.manage.AjaxBookServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>AjaxBookServlet</servlet-name>
+  	<url-pattern>/ajaxbook</url-pattern>
+  </servlet-mapping>
+  <!-- *************************** -->
+  <!-- 添加图书类型数据 -->
+  <servlet>
+  	<servlet-name>AddBookClassServlet</servlet-name>
+  	<servlet-class>com.zh.process.AddBookClassServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>AddBookClassServlet</servlet-name>
+  	<url-pattern>/addBookClass</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 添加图书基本信息数据 -->
+  <servlet>
+  	<servlet-name>AddBookInfoServlet</servlet-name>
+  	<servlet-class>com.zh.process.AddBookInfoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>AddBookInfoServlet</servlet-name>
+  	<url-pattern>/addBookInfo</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 添加图书详细信息数据 -->
+  <servlet>
+  	<servlet-name>AddBookDeInfoServlet</servlet-name>
+  	<servlet-class>com.zh.process.AddBookDeInfoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>AddBookDeInfoServlet</servlet-name>
+  	<url-pattern>/addBookDetailInfo</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 添加电子书 -->
+  <servlet>
+  	<servlet-name>AddEbookInfoServlet</servlet-name>
+  	<servlet-class>com.zh.process.AddEbookInfoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>AddEbookInfoServlet</servlet-name>
+  	<url-pattern>/addEbookInfo</url-pattern>
+  </servlet-mapping>
+  <!-- *************************** -->
+  
+  <!-- 用户 -->
+  <!-- 添加商品到购物车 -->
+  <servlet>
+  	<servlet-name>AddShoppingCartServlet</servlet-name>
+  	<servlet-class>com.zh.shopping.cart.AddShoppingCartServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>AddShoppingCartServlet</servlet-name>
+  	<url-pattern>/addshoppingcart</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 显示购物车 -->
+  <servlet>
+  	<servlet-name>GetShoppingCartServlet</servlet-name>
+  	<servlet-class>com.zh.shopping.cart.GetShoppingCartServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>GetShoppingCartServlet</servlet-name>
+  	<url-pattern>/getshoppingcart</url-pattern>
+  </servlet-mapping>
+
+  <!-- 更新购物车图书数量 -->
+  <servlet>
+  	<servlet-name>UpdataShoppingCartServlet</servlet-name>
+  	<servlet-class>com.zh.shopping.cart.UpdataShoppingCartServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>UpdataShoppingCartServlet</servlet-name>
+  	<url-pattern>/updatashoppingcart</url-pattern>
+  </servlet-mapping>  
+  
+  <!-- 删除购物车内单本书 -->
+  <servlet>
+  	<servlet-name>DeleteShoppingCartServlet</servlet-name>
+  	<servlet-class>com.zh.shopping.cart.DeleteShoppingCartServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>DeleteShoppingCartServlet</servlet-name>
+  	<url-pattern>/deleteshoppingcart</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 意见反馈 -->
+  <servlet>
+  	<servlet-name>FeedBackServlet</servlet-name>
+  	<servlet-class>com.zh.servlet.user.FeedBackServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>FeedBackServlet</servlet-name>
+  	<url-pattern>/feedback</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 所有图书商品 -->
+  <servlet>
+  	<servlet-name>AllBookServlet</servlet-name>
+  	<servlet-class>com.zh.servlet.user.AllBookServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>AllBookServlet</servlet-name>
+  	<url-pattern>/allbook_table</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 添加订单 -->
+  <servlet>
+  	<servlet-name>AddOrderformServlet</servlet-name>
+  	<servlet-class>com.zh.servlet.user.AddOrderformServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>AddOrderformServlet</servlet-name>
+  	<url-pattern>/addorderform</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 核对订单 -->
+  <servlet>
+  	<servlet-name>GoOrderServlet</servlet-name>
+  	<servlet-class>com.zh.shopping.cart.GoOrderServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>GoOrderServlet</servlet-name>
+  	<url-pattern>/goorder</url-pattern>
+  </servlet-mapping>
+  
+  <!-- Now核对订单 -->
+  <servlet>
+  	<servlet-name>NowGoOrderServlet</servlet-name>
+  	<servlet-class>com.zh.shopping.cart.NowGoOrderServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>NowGoOrderServlet</servlet-name>
+  	<url-pattern>/nowGoOrder</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 查看订单 -->
+  <servlet>
+  	<servlet-name>UserOrderformServlet</servlet-name>
+  	<servlet-class>com.zh.servlet.user.UserOrderformServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>UserOrderformServlet</servlet-name>
+  	<url-pattern>/userorderform</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 添加收藏 -->
+  <servlet>
+  	<servlet-name>AddFavoriteServlet</servlet-name>
+  	<servlet-class>com.zh.servlet.user.AddFavoriteServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>AddFavoriteServlet</servlet-name>
+  	<url-pattern>/addfavorite</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 添加收藏Ajax -->
+  <servlet>
+  	<servlet-name>AddFavoriteAjaxServlet</servlet-name>
+  	<servlet-class>com.zh.servlet.user.AddFavoriteAjaxServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>AddFavoriteAjaxServlet</servlet-name>
+  	<url-pattern>/addfavoriteAjax</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 查看收藏夹 -->
+  <servlet>
+  	<servlet-name>UserFavoriteServlet</servlet-name>
+  	<servlet-class>com.zh.servlet.user.UserFavoriteServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>UserFavoriteServlet</servlet-name>
+  	<url-pattern>/userfavorite</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 删除收藏 -->
+  <servlet>
+  	<servlet-name>DeleteFavoriteServlet</servlet-name>
+  	<servlet-class>com.zh.servlet.user.DeleteFavoriteServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>DeleteFavoriteServlet</servlet-name>
+  	<url-pattern>/deletefavorite</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 删除订单 -->
+  <servlet>
+  	<servlet-name>DeleteOrderServlet</servlet-name>
+  	<servlet-class>com.zh.servlet.user.DeleteOrderServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>DeleteOrderServlet</servlet-name>
+  	<url-pattern>/deleteOrder</url-pattern>
+  </servlet-mapping>
+    <!-- 修改密码 -->
+  <servlet>
+  	<servlet-name>ChangePassword</servlet-name>
+  	<servlet-class>com.zh.servlet.ChangePassword</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>ChangePassword</servlet-name>
+  	<url-pattern>/changepassword</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 用户查看个人信息 -->
+  <servlet>
+  	<servlet-name>UserInformationServlet</servlet-name>
+  	<servlet-class>com.zh.servlet.user.UserInformationServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>UserInformationServlet</servlet-name>
+  	<url-pattern>/userinformation</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 更新个人信息 -->
+  <servlet>
+  	<servlet-name>UpdataUserServlet</servlet-name>
+  	<servlet-class>com.zh.servlet.user.UpdataUserServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>UpdataUserServlet</servlet-name>
+  	<url-pattern>/updatauser</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 按书名搜索 -->
+  <servlet>
+  	<servlet-name>BookNameServlet</servlet-name>
+  	<servlet-class>com.zh.servlet.search.BookNameServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>BookNameServlet</servlet-name>
+  	<url-pattern>/bookname</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 按图书类型搜索 -->
+  <servlet>
+  	<servlet-name>BookClassServlet</servlet-name>
+  	<servlet-class>com.zh.servlet.search.BookClassServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>BookClassServlet</servlet-name>
+  	<url-pattern>/bookclass</url-pattern>
+  </servlet-mapping>
+  
+    <!-- 按作者搜索 -->
+  <servlet>
+  	<servlet-name>AuthorServlet</servlet-name>
+  	<servlet-class>com.zh.servlet.search.AuthorServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>AuthorServlet</servlet-name>
+  	<url-pattern>/author</url-pattern>
+  </servlet-mapping>
+  
+    <!-- 按价格区间搜索 -->
+  <servlet>
+  	<servlet-name>UnitpriceServlet</servlet-name>
+  	<servlet-class>com.zh.servlet.search.UnitpriceServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>UnitpriceServlet</servlet-name>
+  	<url-pattern>/unitprice</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 显示图书详情页 -->
+  <servlet>
+  	<servlet-name>BookInformationServlet</servlet-name>
+  	<servlet-class>com.zh.servlet.user.BookInformationServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>BookInformationServlet</servlet-name>
+  	<url-pattern>/bookinformation</url-pattern>
+  </servlet-mapping>
+  
+  <!--留言 -->
+	<servlet>
+		<servlet-name>MessageServlet</servlet-name>
+		<servlet-class>com.zh.servlet.messages.MessageSerlvet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MessageServlet</servlet-name>
+		<url-pattern>/message</url-pattern>
+	</servlet-mapping>
+	
+	<!-- 赞 -->
+	<servlet>
+		<servlet-name>ThumbServlet</servlet-name>
+		<servlet-class>com.zh.servlet.messages.ThumbServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ThumbServlet</servlet-name>
+		<url-pattern>/thumb</url-pattern>
+	</servlet-mapping>
+
+	<!-- 留言列表 -->
+	<servlet>
+		<servlet-name>MessaageListServlet</servlet-name>
+		<servlet-class>com.zh.servlet.messages.MessaageListServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MessaageListServlet</servlet-name>
+		<url-pattern>/messagelist</url-pattern>
+	</servlet-mapping>
+	
+	<!-- 电子书显示 -->
+	<servlet>
+		<servlet-name>EbookServlet</servlet-name>
+		<servlet-class>com.zh.servlet.user.EbookServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EbookServlet</servlet-name>
+		<url-pattern>/ebook</url-pattern>
+	</servlet-mapping>
+	
+	<!-- 电子书显示百度精选 -->
+	<servlet>
+		<servlet-name>EbookBaiduServlet</servlet-name>
+		<servlet-class>com.zh.servlet.user.EbookBaiduServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EbookBaiduServlet</servlet-name>
+		<url-pattern>/ebookBaidu</url-pattern>
+	</servlet-mapping>
+	
+	<!-- 电子书显示京东精选 -->
+	<servlet>
+		<servlet-name>EbookJdServlet</servlet-name>
+		<servlet-class>com.zh.servlet.user.EbookJdServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EbookJdServlet</servlet-name>
+		<url-pattern>/ebookJd</url-pattern>
+	</servlet-mapping>
+	
+	<!-- 电子书下载 -->
+	<servlet>
+		<servlet-name>EbookDownloadServlet</servlet-name>
+		<servlet-class>com.zh.servlet.user.EbookDownloadServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EbookDownloadServlet</servlet-name>
+		<url-pattern>/ebookDownload</url-pattern>
+	</servlet-mapping>
+	
+	<!-- 书籍热度排名 -->
+	<servlet>
+	<servlet-name>hotbooks</servlet-name>
+	<servlet-class>com.zh.servlet.messages.HotBookServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	<servlet-name>hotbooks</servlet-name>
+	<url-pattern>/hotbooks</url-pattern>
+	</servlet-mapping>
+</web-app>

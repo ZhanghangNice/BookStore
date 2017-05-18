@@ -1,0 +1,189 @@
+.row{
+	margin:0px;
+}
+.myspan{
+	margin-top:130px;
+	width:1200px;
+	min-height:0px;
+	float:none;
+	margin-left:auto;
+	margin-right:auto;
+}
+.current{
+	width:700px;
+	height:50px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.myuser-order{
+	width:1000px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:10px;
+}
+.tit-txt{
+	line-height: 42px;
+    font-size: 16px;
+    font-family: "Microsoft YaHei";
+    margin: 0;
+    padding: 0;
+}
+.checkout-steps{
+	background-color: #fff;
+    padding: 0 20px;
+    border: 1px solid  #f0f0f0;
+}
+
+.form-horizontal .control-label{
+	width:100px;
+}
+.form-horizontal .controls{
+	margin-left:120px;
+}
+.shouName{
+	float:left;
+}
+.form-horizontal .lian{
+	margin:0px;
+}
+
+.payment-list {
+    padding: 0 20px 0px;
+}
+.list-cont{
+	margin: 0;
+    padding: 0;
+}
+.list-cont li {
+    float: left;
+    margin-right: 10px;
+    display: list-item;
+}
+ul #payment-list{
+	list-style: none;
+}
+.payment-list .list-cont .payment-item {
+    float: left;
+    position: relative;
+    border: 2px solid #ddd;
+    height: 18px;
+    line-height: 18px;
+    padding: 5px 24px;
+    cursor: pointer;
+    margin: 0;
+}
+.invoice-cont {
+    padding: 5px 20px 20px 20px;
+    line-height: 18px;
+}
+
+.payment-list .list-cont .payment-item-hover{
+	border: 2px solid #5FBD5F;
+}
+.order-summary{
+	float:right;
+	width: 250px;
+    margin-bottom: 10px;
+    margin-right: 30px;
+}
+
+.order-summary div{
+	height:30px;
+}
+
+.order-summary span{
+	width: 160px;
+	margin-right: 20px;
+	float: left;
+	text-align: right;
+}
+div .summary{
+	height:60px;
+	margin-bottom:10px
+}
+.yt{
+	margin-top:20px;
+}
+.ee{
+	position:absolute;
+	margin-top:20px;
+	margin-left:160px;
+	font-size:25px; 
+	color:red;
+}
+.tijiao{
+	margin-top:10px;
+	float:right;
+}
+
+/* 验证 */
+input.error:focus{
+transition:border linear 0.2s,box-shadow linear .2s;
+outline:none;
+border-color:red;
+box-shadow:0 0 8px red;
+}
+textarea.error:focus{
+	transition:border linear 0.2s,box-shadow linear .2s;
+	outline:none;
+	border-color:red;
+	box-shadow:0 0 8px red;
+}
+ #receiver-error,#contact-error,#address-error, #orderremark-error {
+   width: auto;
+   color:red;
+}
+#contact-error{
+	margin-left:320px;
+}
+
+
+/* 熊猫走动 */
+.walk{
+	border:0px;
+	height:140px;
+	width:100px;
+	position:absolute;
+	left:0px;
+	bottom:0px;
+	position:fixed;
+	
+	animation-name:myfirst;
+	animation-duration:5s;
+	animation-timing-function:linear;
+	animation-delay:2s;
+	animation-iteration-count:infinite;
+	animation-direction:alternate;
+	animation-play-state:running;
+	/* Safari and Chrome: */
+	-webkit-animation-name:myfirst;
+	-webkit-animation-duration:5s;
+	-webkit-animation-timing-function:linear;
+	-webkit-animation-delay:2s;
+	-webkit-animation-iteration-count:infinite;
+	-webkit-animation-direction:alternate;
+	-webkit-animation-play-state:running;
+}
+
+@keyframes myfirst
+{
+0%   {left:0px; bottom:0px;}
+25%  {left:0px; bottom:0px;}
+50%  {left:100px; bottom:100px;}
+75%  {left:0px; bottom:100px;}
+100% {left:0px; bottom:0px;}
+}
+
+@-webkit-keyframes myfirst /* Safari and Chrome */
+{
+0%   {left:0px; bottom:0px;}
+25%  {left:100px; bottom:0px;}
+50%  {left:100px; bottom:100px;}
+75%  {left:0px; bottom:100px;}
+100% {bleft:0px; bottom:0px;}
+}
+.walk:hover{
+	-webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}

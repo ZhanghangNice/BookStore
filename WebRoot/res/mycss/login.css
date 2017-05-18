@@ -1,0 +1,65 @@
+body {
+	background: #f5f5f5;
+	font-family: '微软雅黑', '黑体', 'times new roman';
+}
+
+.navbar {
+	height: 50px;
+	margin: 0 auto 0;
+	padding-top: 30px;
+	width: 1200px;
+}
+
+.logo-text {
+	margin-top: 38px;
+	font-size: 30px;
+	color:#000;
+}
+
+.trigger {
+	float: right;
+	height: 20px;
+	margin-right:20px;
+	padding-top: 15px;
+	line-height: 20px;
+}
+
+.login-panel {
+	margin-top: 10px;
+	padding-top: 80px;
+	padding-bottom: 80px;
+	background: url("../images/webico/login.png");
+}
+
+.login-panel form {
+	background: white;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.login-panel form .vcode {
+	cursor: pointer;
+}
+
+.form {
+	margin-left: 590px;
+	padding-left: -50px;
+	width: 350px;
+}
+
+.control-group {
+	margin-left: -80px;
+}
+
+.left {
+	padding-left: 40px;
+}
+
+.wang {
+	margin-top: 5px;
+	margin-left: 290px;
+}
+
+.denglu {
+	margin: 0px 20px;
+}

@@ -1,0 +1,135 @@
+body{
+	background:#FFFFFF;
+	font-family: '微软雅黑','黑体','times new roman';
+}
+.top-nav {
+	height: 50px;
+	margin: 0 auto;
+	padding-top: 30px;
+	width: 1100px;
+}
+.top-nav a{
+	text-decoration:none;
+}
+.logo{
+	float:left;
+	padding-right:20px;
+}
+.booklogo{
+	font-size:30px;
+	color:#000;
+}
+.top-nav-a{
+	position: absolute;
+	margin-left:200px;
+}
+
+.trigger{
+	float:right;
+	margin-top:7px;
+
+}
+.row{
+	margin-top:50px;
+	margin-left:0px;
+}
+.myspan{
+	width:950px;
+	margin:0px;
+	margin-left:auto;
+	margin-right:auto;
+	float:none;
+}
+
+.form-horizontal .control-group{
+	width:450px;
+	float:left;
+}
+.form-horizontal .mydiv{
+	clear:both;
+}
+.form-horizontal .control-label{
+	width:100px;
+}
+.form-horizontal .controls {
+    margin-left: 120px;
+}
+
+.right_b .btn{
+	width:220px;
+}
+.nav{
+	margin-bottom:0px;
+}
+li ul.dropdown-menu{
+	position: relative;
+}
+.footer{
+	margin-top:50px;
+}
+.typeahead {
+    position: absolute;
+}
+
+input.error:focus,select.error:focus{
+transition:border linear 0.2s,box-shadow linear .2s;
+outline:none;
+border-color:red;
+box-shadow:0 0 8px red;
+}
+#bookid-error,#bookname-error,#unitprice-error, 
+#author-error,#publisher-error,#classid-error, 
+#numpages-error,#publdata-error,#bigImage-error,
+#ebookname,#ebooktxt-error,#ebookimage-error,
+#stockid-error,#stockdate-error,#stockprice-error,
+#stockquantity-error,#bookidA-error {
+   width: auto;
+   color:red;
+   position: absolute;
+}
+#upload-error{
+	color:red;
+}
+
+input.input-file{
+	color: #555;
+	border: 1px #ccc solid;
+	width:206px;
+	background-color: #fff;
+	height: 20px;
+    padding: 4px 6px;
+    font-size: 14px;
+    border-radius: 4px;
+}
+/* 文件上传css */
+.box {
+	position: relative;
+	float: left;
+}
+
+input.uploadFile {
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	opacity: 0;
+	filter: alpha(opacity = 0);
+	cursor: pointer;
+	width: 276px;
+	height: 30px;
+	overflow: hidden;
+}
+
+input.textbox {
+	margin: 0;
+	padding: 0;
+	float: left;
+	padding: 4px 6px;
+	color: #999;
+	height: 20px;
+	line-height: 24px;
+	border: 1px #ccc solid;
+	width: 210px;
+	margin-right: 4px;
+}
