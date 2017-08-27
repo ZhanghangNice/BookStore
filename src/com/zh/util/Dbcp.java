@@ -14,9 +14,9 @@ import org.apache.commons.dbcp.BasicDataSource;
  */
 public class Dbcp {
 	private static final String DRIVER_CLASS = "com.mysql.jdbc.Driver";   //加载驱动程序
-	private static final String URL = "jdbc:mysql://119.29.98.175:3306/bookstores?useUnicode=true&characterEncoding=UTF-8";
-	private static final String USER = "ZH$cppy";
-	private static final String PASSWORD = "X86226@.cppy$memory&";
+	private static final String URL = "jdbc:mysql://172.0.0.1:3306/bookstores?useUnicode=true&characterEncoding=UTF-8";
+	private static final String USER = "root";
+	private static final String PASSWORD = "root";
 	private static BasicDataSource dataSource;  //数据库连接池   需要commons-dbcp.jar包和commons-pool.jar包
 	
 	static{
