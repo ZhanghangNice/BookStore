@@ -1,5 +1,7 @@
 # BookStore
 
-该项目是本人在大学时为更好的学习jsp而开发的，后台逻辑并不复杂，所以没有使用任何框架，用的是纯servlet;做项目的大部分时间都花在了前段上，前段主要用到了Bootstap和jQuery进行构建；数据库当然是MySQL了，其中的数据基本都是爬取于各大电商网站。  
-
-### 希望为开源世界添砖加瓦
+* JAVA
+* jsp servlet
+* Bootstap
+* jQuery
+* mysql
