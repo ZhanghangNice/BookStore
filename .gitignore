@@ -1,0 +1,4 @@
+.idea/*
+*.jar
+*.class
+WebRoot/WEB-INF/classes/*
