@@ -30,3 +30,15 @@
     5. 修改连接数据库配置
 
         src/com/zh/util/Dbcp.java
+
+    6. jar
+        commons-codoc-1.5.jar
+        commons-dbcp-1.3.jar
+        commons-fileupload-1.2.2.jar
+        commons-io-2.4.jar
+        commons-pool-1.5.6.jar
+        commons-validator-1.5.0.jar
+        jstl.jar
+        mysql-connector-java-5.1.17-bin.jar
+        servlet-api.jar
+        standard.jar
