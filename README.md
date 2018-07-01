@@ -6,6 +6,13 @@
 * jQuery
 * mysql
 
+### 运行效果图
+
+![](image/bookstore001.png)
+![](image/bookstore002.png)
+![](image/bookstore003.png)
+![](image/bookstore004.png)
+
 ### run 。。。
 
     1. 用 eclips 导入项目
